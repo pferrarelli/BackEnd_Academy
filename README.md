@@ -1,0 +1,16 @@
+##Tecnologie Coinvolte:
+- MYSQL
+- Hibernate
+- Spring Boot
+- Angular 17
+- Docker e K8s
+
+##Traccia
+Creare un sistema di gestione dei Task che permetta di visualizzare i seguenti stati:
+
+- Creato 
+- In Progress
+- Finito
+
+I Task devo quindi poter essere creati, aggiornati o cancellati tramite apposite Api.
+Si ha anche necessità di avere un'apposita interfaccia grafica per rendere l'esperienza utente semplice e intuibile, così da poter visualizzare tutte le informazioni che riguardano i Task.
