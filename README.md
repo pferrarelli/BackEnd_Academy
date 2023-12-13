@@ -1,11 +1,11 @@
-##Tecnologie Coinvolte:
+## Tecnologie Coinvolte:
 - MYSQL
 - Hibernate
 - Spring Boot
 - Angular 17
 - Docker e K8s
 
-##Traccia
+## Traccia
 Creare un sistema di gestione dei Task che permetta di visualizzare i seguenti stati:
 
 - Creato 
