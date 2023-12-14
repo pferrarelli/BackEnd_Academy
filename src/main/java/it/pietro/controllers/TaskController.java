@@ -47,9 +47,15 @@ public class TaskController {
 	}
 	
 	@PutMapping("/updateparams")
-	public void updateTask(@RequestParam String titolo, String descrizione, Stato stato, String dataInizio, String dataFine, int id_dipendente, int id_task) {
+	public void updateTask(@RequestParam String titolo, String descrizione, int stato, String dataInizio, String dataFine, int id_dipendente, int id_task) {
+		Stato enumStato = Stato.CREATO;
+		switch(stato) {
+			case 0: enumStato = Stato.CREATO; break;
+			case 1: enumStato = Stato.IN_PROGRESS; break;
+			case 2: enumStato = Stato.FINITO; break;
+		}
 		Optional<Dipendente> dipendente = dipendenteService.findDipendenteById(id_dipendente);
-		taskService.updateTaskByIdParam(titolo, descrizione, stato, dataInizio, dataFine, dipendente.get(), id_task);
+		taskService.updateTaskByIdParam(titolo, descrizione, enumStato, dataInizio, dataFine, dipendente.get(), id_task);
 	}
 	
 	@DeleteMapping("/delete")
